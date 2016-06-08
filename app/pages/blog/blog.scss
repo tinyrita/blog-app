@@ -1,0 +1,58 @@
+.blog {
+
+  ion-card.speaker ion-card-header .item {
+    padding: 12px;
+  }
+
+  ion-card.speaker ion-card-content .list {
+    margin: 0;
+  }
+
+  ion-card.speaker ion-card-header,
+  ion-card.speaker ion-card-content,
+  ion-card.speaker ion-card-content .list ion-item-content, {
+    padding: 0;
+  }
+
+}
+.blog-detail{
+	.blog-header{
+		width:100%;
+		background-color: #434954;
+
+		position:relative;
+		text-align:center;
+	}
+	.blog-header img{
+	width:100%;
+	}
+	.blog-header h1{
+		position:absolute;
+		top:36%;
+		font-size:2.0em;
+		width:100%;
+		font-weight:bold;
+		color:#fff;
+	}
+	.blog-header h2{
+		font-size:1.0em;
+		position:absolute;
+		top:62%;
+		width:100%;
+		color:#fff;
+	}
+	.member{
+		font-size:1em;
+		position:absolute;
+		top:72%;
+		width:100%;
+	}
+	.realname{
+		font-size: 0.9em;
+		color: #FFF;
+		background-color: color($colors,secondary);
+		padding: 0.7em 0.3em 0.7em 0.3em;
+		border-radius: 4em;
+		width:38px;
+	}
+}

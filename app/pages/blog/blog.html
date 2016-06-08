@@ -1,0 +1,62 @@
+<ion-navbar *navbar>
+	<button menuToggle>
+		<ion-icon name="menu"></ion-icon>
+	</button>
+
+	<ion-title>博客</ion-title>
+
+	<ion-buttons end>
+		<button (click)="presentAdd()">
+			<ion-icon name="add"></ion-icon>
+		</button>
+	</ion-buttons>
+
+</ion-navbar>
+
+<ion-content padding class="blog">
+	<ion-refresher (refresh)="doRefresh($event)">
+		<ion-refresher-content
+			pullingIcon="arrow-dropdown"
+			pullingText="Pull to Refresh"
+			refreshingSpinner="circles"
+			refreshingText="Refreshing...">
+		</ion-refresher-content>
+	</ion-refresher>
+
+
+
+  <ion-card *ngFor="#p of blogs" class="speaker">
+
+    <ion-card-header>
+      <ion-item (click)="showBlogDetail(p)">
+        <ion-avatar item-left>
+          <img src="img/speakers/lion.jpg">
+        </ion-avatar>
+					<p>作者：{{p.oid}} 日期：2016-06-07</p>
+				<p>{{p.name}}</p>
+      </ion-item>
+    </ion-card-header>
+
+    <ion-card-content class="outer-content">
+      <ion-list>
+        <button ion-item (click)="showBlogDetail(p)">
+          <div>{{p.content | slice:0:28}}...</div>
+        </button>
+      </ion-list>
+    </ion-card-content>
+
+    <ion-item>
+      <button clear item-left>
+        <ion-icon name="heart"></ion-icon>
+        Like
+      </button>
+      <button clear item-right>
+        <ion-icon name="share"></ion-icon>
+        Share
+      </button>
+    </ion-item>
+
+  </ion-card>
+
+
+</ion-content>
